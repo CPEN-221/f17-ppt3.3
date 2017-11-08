@@ -37,19 +37,19 @@ A `FrequentStrings` type allows us to store `Strings`s (including duplicates) an
 Here are the essential operations that a `FrequentStrings` supports:
 
 1. **Creators**
-	1. Create an empty `FrequentStrings` object
-	2. Create a `FrequentStrings` object using an array of `Strings`s as initial values
+	1. Create an empty `FrequentStrings` object.
+	2. Create a `FrequentStrings` object using an array of `Strings`s as initial values.
 
 2. **Mutators**
-	1. Add a given `String`
-	2. Remove exactly one occurrence of a given `String`
+	1. Add a given `String`.
+	2. Remove exactly one occurrence of a given `String`.
 
 3. **Observers**
-	1. Check if a `String` is in the object
-	2. Return a count of the number of occurrences of a `String` in the bag
-	3. Return a `List` of **unique** `String`s in the object, sorted by the frequency of occurrence (most frequent first, break ties using the one that is [lexicographically smaller](https://docs.oracle.com/javase/7/docs/api/java/lang/String.html#compareTo) first). Changes to the returned `List` should not affect the `FrequentStrings` object.
-	4. Verify equality: two `FrequentStrings` are equal if and only if each `String` occurs the same number of times in each object
-	5. A suitable hash code operation
+	1. Check if a `String` is in the object.
+	2. Return a count of the number of occurrences of a `String` in the bag.
+	3. Return a sorted `List` of **distinct** `String`s in the object. Changes to the returned `List` should not affect the `FrequentStrings` object.
+	4. Verify equality: two `FrequentStrings` are equal if and only if each `String` occurs the same number of times in each object.
+	5. A suitable hash code operation.
 
 ### Specifications
 
@@ -67,25 +67,30 @@ void add(String s)
 
 // remove exactly one occurrence of s
 // from the FrequentStrings object
-// if s does not exist in the Bag then do nothing
+// if s does not exist in the object then do nothing
 void remove(String s)
 
 // return true if this FrequentStrings object
 // contains s and false otherwise
 boolean contains(String s)
 
-// count the occurrences of String s in the object
+// get the count the occurrences of String s in the object
+// if s is not in the object then return 0
 int getCount(String s)
 
-// return a List of unique Strings in the object
-// sorted by the frequency of occurrence
-// and breaking ties by returning the lexicographically
-// smaller String first
+// get the String that is mode of the Strings in the object
+// the mode is the most frequent string
+// if multiple Strings have the same and highest frequency
+// then return any such String
+// if the object has no Strings then throw an EmptyObjectException
+String getMode() throws EmptyObjectException
+
+// return a sorted List of distinct Strings in the object
 // Changes to the returned List should not mutate
 // the FrequentStrings object
 // and the returned List should be empty
 // if the object has no Strings
-List<String> sortedByFrequency()
+List<String> sortedStringSet()
 ```
 
 Although not listed above, `equals()` and `hashCode()` should be implemented.
