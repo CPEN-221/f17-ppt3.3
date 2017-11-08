@@ -51,6 +51,7 @@ Here are the essential operations that a `FrequentStrings` supports:
 	3. Return a sorted `List` of **distinct** `String`s in the object. Changes to the returned `List` should not affect the `FrequentStrings` object.
 	4. Verify equality: two `FrequentStrings` are equal if and only if each `String` occurs the same number of times in each object.
 	5. A suitable hash code operation.
+	6. Similarity: Two `FrequentStrings` objects are similar if they contain the same set of `String`s (although counts may be different)
 
 ### Specifications
 
@@ -92,6 +93,12 @@ String getMode() throws EmptyObjectException
 // and the returned List should be empty
 // if the object has no Strings
 List<String> sortedStringSet()
+
+// are two FrequentStrings objects similar?
+// true if the two objects contain the same Strings
+// and false otherwise
+// the objects need not have the same counts for the Strings
+boolean similar(FrequentStrings other)
 ```
 
 Although not listed above, `equals()` and `hashCode()` should be implemented.
