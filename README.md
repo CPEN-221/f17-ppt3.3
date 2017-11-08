@@ -46,7 +46,7 @@ Here are the essential operations that a `FrequentStrings` supports:
 
 3. **Observers**
 	1. Check if a `String` is in the object.
-	2. Return a count of the number of occurrences of a `String` in the bag.
+	2. Return a count of the number of occurrences of a `String` in the object.
 	3. Return the mode (the most frequent `String`) in the object. If multiple `String`s have the same highest count, then any one `String` can be returned. If the object has no `String` then an `EmptyObjectException` must be thrown.
 	3. Return a sorted `List` of **distinct** `String`s in the object. Changes to the returned `List` should not affect the `FrequentStrings` object.
 	4. Verify equality: two `FrequentStrings` are equal if and only if each `String` occurs the same number of times in each object.
