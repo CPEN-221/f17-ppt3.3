@@ -186,6 +186,7 @@ public void test8() {
 	FrequentStrings fs = new FrequentStrings();
 	try {
 		fs.getMode();
+		fail("Should have seen an exception");
 	}
 	catch (EmptyObjectException e) {
 		// success; empty object should throw exception with getMode

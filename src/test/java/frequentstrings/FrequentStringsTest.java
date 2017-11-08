@@ -88,6 +88,7 @@ public class FrequentStringsTest {
 		FrequentStrings fs = new FrequentStrings();
 		try {
 			fs.getMode();
+			fail("Should have seen an exception");
 		} catch (EmptyObjectException e) {
 			// success; empty object should throw exception with getMode
 			assertTrue(true);
