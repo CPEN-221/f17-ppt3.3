@@ -54,7 +54,7 @@ Here are the essential operations that a `FrequentStrings` supports:
 ### Specifications
 
 ```
-// Create an empty OddEvenBag
+// Create an empty FrequentStrings object
 FrequentStrings()
 
 // Create a FrequentStrings object using the elements in
