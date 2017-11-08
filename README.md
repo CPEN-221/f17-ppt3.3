@@ -212,7 +212,7 @@ public void test9() {
 + You should implement all the methods that are indicated with `TODO`.
 + Passing the provided tests is the minimum requirement. Use the tests to identify cases that need to be handled. Passing the provided tests is *not sufficient* to infer that your implementation is complete and that you will get full credit. Additional tests will be used to evaluate your work. The provided tests are to guide you.
 + You can implement additional helper methods if you need to but you should keep these methods `private` to the appropriate classes.
-+ You do not need to implement new classes.
++ You do not need to implement new classes **unless asked to**.
 + You can use additional standard Java libraries by importing them.
 + Do not throw new exceptions unless the specification for the method permits exceptions.
 
