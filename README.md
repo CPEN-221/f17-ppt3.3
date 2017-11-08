@@ -174,7 +174,7 @@ public void test7() {
 	FrequentStrings fs = new FrequentStrings(
 			new String[] { "lorem", "ipsum", "lorem", "ipsum", "dolor", "et", "summit", "ipsum" });
 	try {
-	assertEquals("ipsum", fs.getMode());
+		assertEquals("ipsum", fs.getMode());
 	} catch (Exception e) {
 		fail("No exception expected");
 	}

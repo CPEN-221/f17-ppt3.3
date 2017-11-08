@@ -76,20 +76,19 @@ public class FrequentStringsTest {
 		FrequentStrings fs = new FrequentStrings(
 				new String[] { "lorem", "ipsum", "lorem", "ipsum", "dolor", "et", "summit", "ipsum" });
 		try {
-		assertEquals("ipsum", fs.getMode());
+			assertEquals("ipsum", fs.getMode());
 		} catch (Exception e) {
 			fail("No exception expected");
 		}
 		assertEquals(Arrays.asList("dolor", "et", "ipsum", "lorem", "summit"), fs.stringsSorted());
 	}
-	
+
 	@Test
 	public void test8() {
 		FrequentStrings fs = new FrequentStrings();
 		try {
 			fs.getMode();
-		}
-		catch (EmptyObjectException e) {
+		} catch (EmptyObjectException e) {
 			// success; empty object should throw exception with getMode
 			assertTrue(true);
 		}
