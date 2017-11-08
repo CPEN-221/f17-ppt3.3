@@ -152,6 +152,7 @@ public void test5() {
 	fs2.add("etaoin");
 	assertTrue(fs1.equals(fs2));
 	assertTrue(fs2.equals(fs1));
+	assertTrue(fs1.similar(fs2));
 	assertTrue(fs1.hashCode() == fs2.hashCode());
 }
 
