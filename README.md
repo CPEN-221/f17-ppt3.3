@@ -92,7 +92,7 @@ String getMode() throws EmptyObjectException
 // the FrequentStrings object
 // and the returned List should be empty
 // if the object has no Strings
-List<String> sortedStringSet()
+List<String> stringsSorted()
 
 // are two FrequentStrings objects similar?
 // true if the two objects contain the same Strings
